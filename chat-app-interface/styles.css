@@ -16,19 +16,23 @@ main {
 }
 main {
   display: flex;
+  /* max-width: 1000px;
+  margin: auto;
+  border: 1px solid #333;
+  padding: 20px 0; */
 }
 
 .sidebar {
   width: 300px;
   min-width: 300px;
-  background-color: rgb(243, 243, 237);
+  background-color: rgb(241, 241, 241);
   display: flex;
   flex-direction: column;
 }
 
 .search {
-  height: 40px;
-  min-height: 40px;
+  height: 50px;
+  min-height: 50px;
   border-bottom: 1px solid rgb(202, 190, 190);
   position: relative;
   padding: 0 15px;
@@ -87,8 +91,13 @@ main {
 }
 
 .contacts ul li a .contact .message {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 220px;
+  overflow: hidden;
   font-size: 13px;
   color: #999;
+  max-height: 17px;
 }
 
 .contacts ul li a .notification {
@@ -108,4 +117,138 @@ main {
   flex: 1;
   background-color: rgb(255, 255, 255);
   border-left: 1px solid rgb(202, 190, 190);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content .message-header {
+  min-height: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(202, 190, 190);
+}
+
+.content .message-header .user {
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.content .message-header .user img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.content .message-header .user .name {
+  font-size: 16px;
+}
+.content .message-header .user .recent {
+  font-size: 11px;
+  color: #999;
+}
+.content .message-header .options {
+  display: flex;
+  /* align-items: center; */
+  margin-right: 4px;
+}
+.content .message-header .options i {
+  color: #999;
+  font-size: 19px;
+  display: block;
+  width: 30px;
+  text-align: center;
+}
+.content .message-header .options i:hover {
+  color: #222;
+}
+
+.content .message-form {
+  border-top: 1px solid #999;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  margin-bottom: 2px;
+}
+
+.content .message-form input {
+  flex: 1;
+  border: 1px solid #cacaca;
+  border-radius: 20px;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.content .message-form .emoji-container {
+  width: 30px;
+  height: 30px;
+  background-color: #5786c2;
+  text-align: center;
+  line-height: 31px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.content .message-form i {
+  color: white;
+}
+
+.content .message-form .microphone-container {
+  width: 30px;
+  height: 30px;
+  background-color: #c21c1c;
+  text-align: center;
+  line-height: 31px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.content .message-form .picture-container {
+  width: 30px;
+  height: 30px;
+  background-color: #6fa813;
+  text-align: center;
+  line-height: 31px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.message-context {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow: auto;
+}
+.message-context::before {
+  flex: 1;
+}
+
+.message-context .message .bubble {
+  background-color: #f7f7f7;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.message-context .time {
+  color: #999;
+  font-size: 12px;
+}
+
+.message-context .message {
+  align-self: flex-start;
+}
+
+.message-context .message.mine {
+  align-self: flex-end;
+}
+.message-context .message.mine .bubble {
+  background-color: #5786c2;
+  color: white;
+}
+.message-context .message.mine .time {
+  text-align: right;
 }
