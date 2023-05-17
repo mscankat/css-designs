@@ -10,7 +10,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 body {
-  height: 100vh;
+  height: 100%;
 }
 
 .main {
@@ -29,12 +29,15 @@ body {
   color: white;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  padding: 3vh 4vw;
   /* position: fixed; */
-  width: 100%;
+  width: 100vw;
 }
 .background nav img {
   width: 144px;
+}
+.background nav i {
+  display: none;
 }
 
 .background nav ul {
@@ -71,44 +74,30 @@ body {
 }
 
 .background .hero {
+  align-items: center;
   display: flex;
   height: 100vh;
   justify-content: space-between;
 }
 .background .hero-info {
-  width: 50%;
+  width: 50vw;
   color: #fff;
   text-align: center;
   margin-left: 67px;
-  margin-top: 5%;
+  margin-bottom: 5vh;
 }
 
 .background .hero-info .container {
+  width: 50vw;
   margin: 0 auto;
   display: inline-block;
   text-align: left;
-  /* max-width: 800px; */
 }
 
 .background .hero-info h1 {
   font-size: 120px;
   display: block;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 1440px) {
-  .background .hero-info .container h1 {
-    font-size: 70px;
-    display: block;
-    margin: 0 auto;
-  }
-  .background .hero .hero-image img {
-    width: 500px;
-  }
-  .background .hero-info .container p {
-    font-size: 20px;
-    line-height: 30px;
-  }
 }
 
 .background .hero-info span {
@@ -124,7 +113,6 @@ body {
 .background .hero-info .button {
   margin-top: 32px;
   font-size: 22px;
-  /* font-family: "Poppins"; */
   font-weight: 500;
   line-height: 57px;
   text-align: center;
@@ -145,33 +133,21 @@ body {
   font-size: 24px;
 }
 .background .hero .hero-image {
-  width: 50%;
+  width: 50vw;
+  text-align: center;
 }
 
 .background .hero .hero-image img {
-  display: block;
-  max-width: 750px;
-  max-height: 80vh;
-  margin: auto;
+  /* display: block; */
+  object-fit: contain;
+  width: 100%;
+  height: 100vh;
+  /* margin: auto; */
 }
-@media screen and (max-width: 1830px) {
-  .background .hero .hero-image img {
-    max-width: 700px;
-  }
-  .background .hero-info h1 {
-    font-size: 90px;
-  }
-}
-/* 
-@media screen and (max-width: 1780px) {
-  .background .hero .hero-image img {
-    max-width: 600px;
-  }
-} */
 
 .statistics {
-  width: 1680px;
-  height: 200px;
+  width: 80vw;
+  height: 10vh;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -180,7 +156,7 @@ body {
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   position: absolute;
-  bottom: -119px;
+  bottom: -5vh;
   left: 0;
   right: 0;
 }
@@ -212,26 +188,22 @@ body {
   height: 110vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .hero-2 .hero-info {
-  width: 50%;
   color: #000;
   text-align: center;
-  /* margin-left: 180px; */
-  /* margin-top: 5%; */
-  margin-right: 200px;
 }
 
 .hero-2 .hero-info .container {
   text-align: left;
-  width: 50em;
+  width: 50vw;
+  padding-right: 1vw;
 }
 .hero-2 .hero-info .container .button {
   margin-top: 32px;
   font-size: 22px;
-  /* font-family: "Poppins"; */
   font-weight: 500;
   line-height: 57px;
   text-align: center;
@@ -247,21 +219,6 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1440px) {
-  .hero-2 .hero-info .container h1 {
-    font-size: 48px;
-    display: block;
-    margin: 0 auto;
-  }
-  .background .hero .hero-image img {
-    width: 500px;
-  }
-  .background .hero-info .container p {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
 .hero-2 .hero-info span {
   white-space: nowrap;
 }
@@ -273,27 +230,27 @@ body {
 }
 
 .hero-2 .hero-img {
-  width: 50%;
-  text-align: right;
-  margin-right: 200px;
+  width: 50vw;
+  text-align: center;
 }
 
 .hero-2 .hero-img img {
-  width: 500px;
-  height: 670px;
+  width: 30vw;
+  height: 70vh;
   object-fit: cover;
   border-radius: 20px;
-  /* margin-top: 7em; */
-  /* display: block;
-  margin: auto; */
 }
 
 .service {
-  height: 90vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+}
+
+.service .outline {
+  height: 100%;
 }
 
 .service .outline h1 {
@@ -304,18 +261,19 @@ body {
 
 .service .container {
   display: flex;
-  font-size: 28px;
+  font-size: 2vw;
   flex-wrap: wrap;
   margin: auto;
   text-align: left;
   justify-content: center;
-  gap: 10%;
-  row-gap: 100px;
+  gap: 10vw;
+  row-gap: 10vh;
   line-height: 43px;
+  height: 100%;
 }
 
 .service .container .content {
-  width: 40%;
+  width: 40vw;
 }
 
 .service .container .content .img-container {
@@ -338,10 +296,6 @@ body {
   margin: 20px 0;
 }
 
-.service .container .content .text {
-  width: 25em;
-}
-
 .download .background {
   height: 428px;
   position: relative;
@@ -349,12 +303,12 @@ body {
 
 .download::before {
   content: "";
-  height: 300px;
+  height: 40vh;
   display: block;
 }
 
 .download .background > img {
-  width: 320px;
+  width: calc(230px + 5vw);
   position: absolute;
   right: 10em;
   bottom: 0;
@@ -368,12 +322,17 @@ body {
   justify-content: center;
   height: 100%;
   color: #fff;
-  margin: auto 10em;
+  margin: auto 5em;
   flex-direction: column;
+}
+.download .background .container::after {
+  content: "";
+  width: calc(320px+10em);
 }
 
 .download .background .container .slogan {
-  font-size: 60px;
+  font-size: 3.3vw;
+  width: calc(100vw - 40rem);
   font-weight: 600;
 }
 
@@ -388,34 +347,31 @@ body {
 }
 
 .benefits {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .benefits .hero-info {
-  width: 50%;
+  width: 50vw;
   color: #000;
   text-align: center;
-  /* margin-left: 180px; */
-  /* margin-top: 5%; */
-  margin-right: 200px;
 }
 
 .benefits .hero-info .container {
   text-align: left;
-  width: 50em;
+  width: 50vw;
 }
 
 .benefits .hero-info h1 {
-  font-size: 60px;
+  font-size: 6vw;
   display: block;
   margin: 0 auto;
 }
 
 .benefits .hero-info p {
-  font-size: 25px;
+  font-size: 2vw;
   margin-top: 25px;
   line-height: 39px;
   max-width: 26em;
@@ -423,28 +379,25 @@ body {
 
 .benefits .hero-info ul li {
   margin-top: 0.7em;
-  font-size: 25px;
+  font-size: 2vw;
   list-style: none;
   padding: 10px 70px;
   background-image: url("./images/list.png");
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 50px;
+  background-size: 3vw;
 }
 
 .benefits .hero-img {
-  width: 50%;
-  text-align: right;
-  margin-right: 200px;
+  width: 50vw;
+  text-align: center;
 }
 
 .benefits .hero-img img {
-  width: 480px;
-  height: 600px;
+  width: 28vw;
+  height: 75vh;
   object-fit: cover;
   border-radius: 20px;
-  /* display: block;
-  margin: auto; */
 }
 
 .comments {
@@ -530,7 +483,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8em;
+  padding: 0 8vw;
 }
 
 .footer .left {
@@ -541,7 +494,7 @@ body {
 
 .footer .left ul {
   display: flex;
-  gap: 3em;
+  gap: 3vw;
 }
 
 .footer .left ul li a {
@@ -554,7 +507,7 @@ body {
 
 .footer .left .socials {
   display: flex;
-  gap: 1em;
+  gap: 1vw;
 }
 
 .footer .left .socials a i {
@@ -570,8 +523,6 @@ body {
 .footer .right {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
-  /* height: 100%; */
 }
 
 .footer .right .form {
@@ -586,8 +537,8 @@ body {
 }
 
 .footer .right .form input {
-  width: 550px;
-  height: 80px;
+  width: 35vw;
+  height: 10vh;
   padding-left: 2em;
   font-size: 15px;
   border-radius: 6px;
@@ -602,11 +553,11 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  height: 80px;
+  height: 10vh;
   width: 150px;
   background-color: #d7b9fd;
   text-align: center;
-  line-height: 79px;
+  line-height: calc(10vh - 1px);
   font-weight: 600;
   font-size: 25px;
   border-radius: 6px;
@@ -617,9 +568,237 @@ body {
 }
 
 .footer .right .download-container img {
-  height: 80px;
+  height: 7vh;
   margin-right: 1em;
 }
 .footer .right .download-container {
   margin-top: 5vh;
+}
+
+@media screen and (max-width: 1680px) {
+  .background .hero-info .container h1 {
+    font-size: 80px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .background .hero-info .container p {
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  .hero-2 .hero-info .container h1 {
+    font-size: 48px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .comments .slider .comment .comment-text {
+    font-size: 18px;
+  }
+  .comments .slider .comment .title {
+    font-size: 18px;
+  }
+  .comments .slider .comment .user-profile {
+    font-size: 18px;
+  }
+  .comments .slider .comment .user-profile .photo {
+    width: 60px;
+    height: 60px;
+  }
+  .comments .slider .comment .user-profile .rating {
+    width: 100px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .background nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  .background nav i {
+    display: block;
+    font-size: 3vw;
+    color: #fff;
+  }
+  .background .hero .hero-info .container h1 {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+  .background {
+    height: 60vh;
+  }
+  .background .hero {
+    height: 50vh;
+  }
+  .background .hero .hero-info .container h1 {
+    font-size: 50px;
+  }
+  .background .hero .hero-info .container p {
+    font-size: 20px;
+  }
+
+  .statistics .number {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+  .statistics .number .plus {
+    color: #bc8afc;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .statistics .text {
+    font-size: 20px;
+    line-height: 50px;
+  }
+
+  .hero-2 {
+    height: 70vh;
+  }
+  .hero-2 .hero-info h1 {
+    font-size: 60px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero-2 .hero-info .container h1 {
+    font-size: 35px;
+  }
+
+  .hero-2 .hero-info span {
+    white-space: nowrap;
+  }
+  .hero-2 .hero-info .container p {
+    font-size: 20px;
+  }
+  .hero-2 .hero-img img {
+    width: 35vw;
+    height: 50vh;
+  }
+
+  .service {
+    height: 60vh;
+  }
+
+  .service .container {
+    row-gap: 0vh;
+    line-height: 33px;
+  }
+
+  .service .container .content .img-container {
+    width: 70px;
+    height: 70px;
+    line-height: 99px;
+  }
+
+  .service .container .content .img-container img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .download::before {
+    height: 20vh;
+  }
+
+  .download .background > img {
+    right: 5vw;
+  }
+
+  .download .background .container .slogan {
+    width: calc(100vw - 25rem);
+  }
+
+  .download .background .platforms img {
+    height: 50px;
+  }
+
+  .benefits {
+    height: 60vh;
+  }
+
+  .benefits .hero-img img {
+    width: 40vw;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .comments .slider .comment-2 {
+    display: none;
+  }
+
+  .comments .slider .comment {
+    width: 80vw;
+    justify-content: space-around;
+  }
+  .comments .slider .comment .title {
+    font-size: 30px;
+  }
+  .comments .slider .comment .comment-text {
+    font-size: 24px;
+  }
+  .comments .slider .comment .user-profile {
+    font-size: 23px;
+  }
+  .comments .slider .comment .user-profile .photo {
+    width: 90px;
+    height: 90px;
+  }
+  .comments .slider .comment .user-profile .rating {
+    width: 130px;
+    object-fit: contain;
+  }
+
+  .footer {
+    height: 40vh;
+    background-color: #190422;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8vw;
+  }
+
+  .footer .left {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: 50vw;
+  }
+
+  .footer .left ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+  }
+  .footer .left img {
+    width: 100px;
+  }
+  .footer .right {
+    width: 45vw;
+  }
+  .footer .right .form input {
+    height: 5vh;
+  }
+
+  .footer .right .form .button {
+    line-height: calc(5vh - 1px);
+    height: 5vh;
+  }
+
+  .footer .right .download-container img {
+    height: 5vh;
+  }
+  .footer .right .download-container {
+    display: flex;
+    margin-top: 3vh;
+  }
 }
