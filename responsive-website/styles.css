@@ -79,6 +79,11 @@ body {
   height: 100vh;
   justify-content: space-between;
 }
+.background .hero .hero-image {
+  width: 50vw;
+  text-align: center;
+  height: 100%;
+}
 .background .hero-info {
   width: 50vw;
   color: #fff;
@@ -132,22 +137,18 @@ body {
   margin-left: 3px;
   font-size: 24px;
 }
-.background .hero .hero-image {
-  width: 50vw;
-  text-align: center;
-}
 
 .background .hero .hero-image img {
   /* display: block; */
   object-fit: contain;
   width: 100%;
-  height: 100vh;
+  height: 70%;
   /* margin: auto; */
 }
 
 .statistics {
   width: 80vw;
-  height: 10vh;
+  height: 150px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -156,7 +157,7 @@ body {
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   position: absolute;
-  bottom: -5vh;
+  bottom: -75px;
   left: 0;
   right: 0;
 }
@@ -381,7 +382,7 @@ body {
   margin-top: 0.7em;
   font-size: 2vw;
   list-style: none;
-  padding: 10px 70px;
+  padding: 10px 5vw;
   background-image: url("./images/list.png");
   background-repeat: no-repeat;
   background-position: left center;
@@ -420,7 +421,7 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgba(230, 238, 255, 1) 100%
   );
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   gap: 1em;
@@ -432,7 +433,6 @@ body {
 .comments .slider a > img {
   width: 50px;
   height: 50px;
-  margin: 0 40px;
 }
 
 .comments .slider .comment {
@@ -735,7 +735,6 @@ body {
   .comments .slider .comment-2 {
     display: none;
   }
-
   .comments .slider .comment {
     width: 80vw;
     justify-content: space-around;
@@ -800,5 +799,461 @@ body {
   .footer .right .download-container {
     display: flex;
     margin-top: 3vh;
+  }
+}
+
+@media screen and (max-height: 1100px) and (max-aspect-ratio: 1 / 1) {
+  .statistics {
+    height: 100px;
+    bottom: -50px;
+  }
+  .statistics .number {
+    font-size: 25px;
+  }
+  .statistics .number .plus {
+    font-size: 25px;
+  }
+  .statistics .text {
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .background {
+    height: 120vh;
+  }
+  .background nav img {
+    width: 100px;
+  }
+
+  .background .hero {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .background .hero .hero-image {
+    width: 100vw;
+  }
+  .background .hero-info {
+    width: 100vw;
+    margin-left: 0px;
+    margin-bottom: 1vh;
+  }
+
+  .background .hero-info .container {
+    width: 100vw;
+    padding: 1em 1em 0 1em;
+  }
+  .background .hero-info .container h1 span {
+    font-size: 11vw;
+  }
+  .background .hero-info .container h1 {
+    line-height: 11vwpx;
+  }
+
+  .statistics {
+    width: 85vw;
+    height: 50vh;
+    flex-direction: column;
+    bottom: -46vh;
+  }
+  .statistics .number {
+    font-size: 40px;
+  }
+  .statistics .number .plus {
+    font-size: 40px;
+  }
+
+  .statistics .text {
+    font-size: 30px;
+  }
+
+  .hero-2 {
+    height: 160vh;
+    margin-top: 50vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-2 .hero-info .container {
+    text-align: left;
+    width: 100vw;
+    padding: 2em;
+  }
+  .hero-2 .hero-img {
+    width: 100vw;
+  }
+
+  .hero-2 .hero-img img {
+    width: 60vw;
+    height: 40vh;
+  }
+
+  .service {
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service .outline {
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .service .outline h1 {
+    font-size: 40px;
+
+    margin-bottom: 0px;
+    margin-left: 5%;
+  }
+
+  .service .container {
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    text-align: left;
+    justify-content: center;
+    gap: 0vh;
+    row-gap: 3vh;
+    line-height: 30px;
+    height: auto;
+  }
+
+  .service .container .content {
+    width: 100vw;
+    padding: 2em;
+  }
+
+  .service .container .content .img-container {
+    background-color: #190422;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 114px;
+    border-radius: 50%;
+  }
+
+  .service .container .content .img-container img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .service .container .content .title {
+    font-weight: 600;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .service .container .content .text {
+    font-size: 18px;
+  }
+
+  .download .background {
+    height: 95vh;
+    position: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .download::before {
+    content: "";
+    height: 5vh;
+    display: block;
+  }
+
+  .download .background > img {
+    width: calc(230px + 5vw);
+    position: unset;
+    right: 10em;
+    bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .download .background .container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .download .background .container::after {
+    content: "";
+    width: calc(320px+10em);
+  }
+
+  .download .background .container .slogan {
+    font-size: 9vw;
+    width: 100vw;
+    font-weight: 600;
+  }
+
+  .download .background .platforms {
+    gap: 1em;
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+  }
+
+  .download .background .platforms img {
+    height: 13vw;
+  }
+
+  .benefits {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .benefits .hero-info {
+    height: 100%;
+    width: 100vw;
+    color: #000;
+    text-align: center;
+  }
+
+  .benefits .hero-info .container {
+    text-align: left;
+    width: 100vw;
+    padding: 1em;
+  }
+
+  .benefits .hero-info h1 {
+    font-size: 14vw;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .benefits .hero-info p {
+    font-size: 7vw;
+    margin-top: 25px;
+    line-height: unset;
+    max-width: 26em;
+  }
+
+  .benefits .hero-info ul li {
+    margin-top: 0.7em;
+    font-size: 6vw;
+    list-style: none;
+    padding-left: 11vw;
+    padding-right: 0;
+    background-image: url("./images/list.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 9vw;
+  }
+
+  .benefits .hero-img {
+    display: none;
+  }
+
+  .comments {
+    height: 90vh;
+  }
+  .comment-2 {
+    display: none;
+  }
+
+  .comments .header {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 1em;
+    display: none;
+  }
+
+  .comments .slider {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(230, 238, 255, 1) 100%
+    );
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    padding: 2vw 0;
+    align-items: center;
+  }
+  .comments .slider::before {
+    content: "See what our customers have to say";
+    font-size: 5.5vw;
+    font-weight: 600;
+    padding: 0 1em;
+  }
+
+  .comments .slider a > img {
+    width: 50px;
+    height: 50px;
+    margin: 0 40px;
+    display: none;
+  }
+
+  .comments .slider .comment {
+    width: 90vw;
+    height: 50vh;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 0.8em 1em;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .comments .slider .comment .title {
+    font-size: 22px;
+  }
+  .comments .slider .comment .comment-text {
+    font-size: 19px;
+  }
+
+  .comments .slider .comment .user-profile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    row-gap: 1em;
+    justify-content: space-between;
+  }
+  .comments .slider .comment .user-profile .photo {
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .comments .slider .comment .user-profile .user-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .comments .slider .comment .user-profile .user-info .name-location {
+    margin-left: 1em;
+    font-size: 19px;
+  }
+  .comments
+    .slider
+    .comment
+    .user-profile
+    .user-info
+    .name-location
+    .user-name {
+    font-weight: 600;
+    margin-bottom: 0.3em;
+    font-size: 19px;
+  }
+
+  .footer {
+    height: 75vh;
+    background-color: #190422;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: baseline;
+    padding: 1em;
+    gap: 2em;
+  }
+
+  .footer .left {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 90vw;
+  }
+
+  .footer .left ul {
+    display: flex;
+    gap: 2em;
+  }
+
+  .footer .left ul li a {
+    color: #fff;
+  }
+
+  .footer .left img {
+    width: 100px;
+  }
+
+  .footer .left .socials {
+    display: flex;
+    gap: 1em;
+  }
+
+  .footer .left .socials a i {
+    font-size: 25px;
+    color: #fff;
+  }
+
+  .footer .left .socials a {
+    width: 30px;
+    text-align: center;
+  }
+
+  .footer .right {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+
+  .footer .right .form {
+    position: relative;
+    width: 90vw;
+  }
+
+  .footer .right .label {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 0.5em;
+    padding-left: 0.2em;
+  }
+
+  .footer .right .form input {
+    width: 90vw;
+    height: 10vh;
+    padding-left: 2em;
+    font-size: 15px;
+    border-radius: 6px;
+    border-style: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+  .footer .right .form input:focus {
+    outline: none;
+  }
+
+  .footer .right .form .button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 10vh;
+    width: 150px;
+    background-color: #d7b9fd;
+    text-align: center;
+    line-height: calc(10vh - 1px);
+    font-weight: 600;
+    font-size: 25px;
+    border-radius: 6px;
+  }
+
+  .footer .right .form .button:hover {
+    cursor: pointer;
+  }
+
+  .footer .right .download-container img {
+    height: 13vw;
+    margin-right: 1em;
+  }
+  .footer .right .download-container {
+    margin-top: 2em;
   }
 }
